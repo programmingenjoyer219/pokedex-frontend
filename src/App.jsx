@@ -21,7 +21,7 @@ export default function App() {
 	}
 
 	async function getPokemonData(queryType, name) {
-		let endpoint = `/${queryType}/${name}`;
+		let endpoint = `https://pokedex-backend-jet.vercel.app/${queryType}/${name}`;
 		try {
 			const response = await axios.get(endpoint);
 			setPokemonData(response.data);
